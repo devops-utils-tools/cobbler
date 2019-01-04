@@ -1,0 +1,13 @@
+[Unit]
+Description=init run
+Documentation=http://www.wl166.com
+
+[Service]
+Type=idle
+EnvironmentFile=/etc/init.env
+ExecStart=/bin/bash /etc/rc.d/run.sh
+Restart=no
+KillMode=process
+
+[Install]
+WantedBy=multi-user.target
